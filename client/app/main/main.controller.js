@@ -7,6 +7,9 @@ angular.module('snapItApp')
     // }
 
     //$scope.awesomeThings = [];
+    debugger;
+    $scope.angularGridView = false;
+    $scope.boardGridView = true;
     $scope.pics = [];
     $scope.searchTxt = '';
     $scope.searchDate = true;

@@ -59,7 +59,7 @@
   </div>
 
   <!-- Angular Grid -->
-  <ul class="dynamic-grid angular-grid" angular-grid="pics" grid-width="300" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
+  <ul ng-if="angularGridView" class="dynamic-grid angular-grid" angular-grid="pics" grid-width="300" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >
     <li data-ng-repeat="pic in pics" class="grid" ng-clock>
       <a href={{pic.url}} alt='' class='snapLink' target='_blank'>
         <img src="{{pic.media}}" ng-if="showImage(pic.mediaType)" class="grid-img" data-actual-width = "{{pic.actualWidth}}"  data-actual-height="{{pic.actualHeight}}" />
@@ -78,5 +78,7 @@
       </div> 
     </li>
   </ul>
+
+  <div ng-if="boardGridView" class="boards">Show boards</div>
 
 </div>
