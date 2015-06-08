@@ -7,7 +7,7 @@ angular.module('snapItApp')
     $scope.userEmail = Auth.getUserEmail();
 
     $scope.addFeedToDatabase = function(feedArray) {
-      $http.post('api/things/addFeeds', {feedArray: feedArray}).
+      $http.post('api/things/addFeeds', {feedArray: feedArray, email: $scope.userEmail}).
           success(function(data) {
             console.log(data);
           }).

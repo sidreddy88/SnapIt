@@ -38,6 +38,7 @@ exports.create = function(req, res) {
 exports.createRss = function(req, res) {
 
   var array = req.body.feedArray;
+  var email = req.body.email;
   var sendResponseBack = false;
   var messagesArray = [];
 
@@ -50,7 +51,7 @@ exports.createRss = function(req, res) {
     message.url = feedObject.link;
     message.title = feedObject.title;
     message.description = feedObject.contentSnippet;
-    message.email = 'mike@abc.com';
+    message.email = email;
     message.createTime = Date.now();
     message.createDate = new Date();
     messagesArray.push(message);
