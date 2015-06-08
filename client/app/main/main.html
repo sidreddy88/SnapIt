@@ -11,7 +11,9 @@
     <div id="sortByWrap">
       Sort By : <i class="fa fa-calendar" data-ng-click="sortByTime()"></i><i class="fa fa-thumbs-up" data-ng-click="sortByLikes()"></i>
       <button class="btn btn-primary" ng-click="isRSSCollapsed = !isRSSCollapsed">RSS</button>
-      <button class="btn btn-primary" ng-click="isUploadCollapsed = !isUploadCollapsed">Upload</button>
+      <!-- <button class="btn btn-primary" ng-click="isUploadCollapsed = !isUploadCollapsed">Upload</button> -->    
+    <button class="btn btn-primary" ng-click="gridLayout()">Grid</button>
+    <button class="btn btn-primary" ng-click="boardLayout()">Board</button>
     </div>
     <div>
         
@@ -57,6 +59,14 @@
       </div>
     </div>
   </div>
+
+ <!--  Drop Down Button -->
+
+
+          
+              
+         
+
 
   <!-- Angular Grid -->
   <ul ng-if="angularGridView" class="dynamic-grid angular-grid" angular-grid="pics" grid-width="300" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="true" >

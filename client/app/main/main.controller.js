@@ -7,15 +7,26 @@ angular.module('snapItApp')
     // }
 
     //$scope.awesomeThings = [];
-    debugger;
-    $scope.angularGridView = false;
-    $scope.boardGridView = true;
+    $scope.angularGridView = true;
+    $scope.boardGridView = false;
     $scope.pics = [];
     $scope.searchTxt = '';
     $scope.searchDate = true;
     $scope.isRSSCollapsed = true;
     $scope.isUploadCollapsed = true;
     $scope.userEmail = Auth.getUserEmail();
+
+    $scope.gridLayout = function() {
+      $scope.angularGridView = true;
+      $scope.boardGridView = false;
+    };
+
+    $scope.boardLayout = function() {
+      $scope.angularGridView = false;
+      $scope.boardGridView = true;
+    };
+
+
 
 
     $http.get('/api/things/getItems/?email='+ $scope.userEmail).success(function(pics) {
